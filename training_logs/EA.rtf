@@ -1,0 +1,428 @@
+{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fmodern Consolas;}{\f1\fnil\fcharset129 Courier New;}}
+{\colortbl ;\red20\green20\blue20;\red142\green142\blue142;\red18\green124\blue155;\red235\green215\blue127;\red157\green157\blue157;}
+\viewkind4\uc1\pard\f0\fs20 ubuntu@cv2:~/cv_runs/cv/cv_runs/SA/ultralytics$ cd ..\cf1\highlight2 
+\par \cf0\highlight0 ubuntu@cv2:~/cv_runs/cv/cv_runs/SA$ cd ..\cf1\highlight2 
+\par \cf0\highlight0 ubuntu@cv2:~/cv_runs/cv/cv_runs$ cd EA/ultralytics/\cf1\highlight2 
+\par \cf0\highlight0 ubuntu@cv2:~/cv_runs/cv/cv_runs/EA/ultralytics$ python3 train.py\cf1\highlight2 
+\par \cf0\highlight0 Creating new Ultralytics Settings v0.0.6 file \u9989?\cf1\highlight2 
+\par \cf0\highlight0 View Ultralytics Settings with 'yolo settings' or at '/home/ubuntu/.config/Ultralytics/settings.json'\cf1\highlight2 
+\par \cf0\highlight0 Update Settings with 'yolo settings key=value', i.e. 'yolo settings runs_dir=path/to/dir'. For help see https://docs.ultralytics.com/quickstart/#ultralytics-settings.\cf1\highlight2 
+\par \cf0\highlight0 YOLO11n-cls summary: 92 layers, 2,864,968 parameters, 2,864,968 gradients\cf1\highlight2 
+\par \cf0\highlight0 Transferred 236/242 items from pretrained weights\cf1\highlight2 
+\par \cf0\highlight0 New https://pypi.org/project/ultralytics/8.3.100 available \u55357?\u56835? Update with 'pip install -U ultralytics'\cf1\highlight2 
+\par \cf0\highlight0 Ultralytics 8.3.99 \u55357?\u56960? Python-3.10.12 torch-2.4.0+cu121 CUDA:0 (NVIDIA A100-SXM4-40GB, 40326MiB)\cf1\highlight2 
+\par \cf3\highlight0 engine/trainer: \cf0 task=classify, mode=train, model=yolo11n-cls.yaml, data=data, epochs=50, time=None, patience=100, batch=16, imgsz=512, save=True, save_period=-1, cache=False, device=None, workers=8, project=None, name=train, exist_ok=False, pretrained=True, optimizer=SGD, verbose=True, seed=0, deterministic=True, single_cls=False, rect=False, cos_lr=False, close_mosaic=0, resume=False, amp=True, fraction=1.0, profile=False, freeze=None, multi_scale=False, overlap_mask=True, mask_ratio=4, dropout=0.3, val=True, split=val, save_json=False, save_hybrid=False, conf=None, iou=0.7, max_det=300, half=False, dnn=False, plots=True, source=None, vid_stride=1, stream_buffer=False, visualize=False, augment=False, agnostic_nms=False, classes=None, retina_masks=False, embed=None, show=False, save_frames=False, save_txt=False, save_conf=False, save_crop=False, show_labels=True, show_conf=True, show_boxes=True, line_width=None, format=torchscript, keras=False, optimize=False, int8=False, dynamic=False, simplify=True, opset=None, workspace=None, nms=False, lr0=0.0001, lrf=0.01, momentum=0.937, weight_decay=0.0005, warmup_epochs=3.0, warmup_momentum=0.8, warmup_bias_lr=0.1, box=7.5, cls=10, dfl=1.5, pose=12.0, kobj=1.0, nbs=64, hsv_h=0.015, hsv_s=0.7, hsv_v=0.4, degrees=0.0, translate=0.1, scale=0.5, shear=0.0, perspective=0.0, flipud=0.0, fliplr=0.5, bgr=0.0, mosaic=1.0, mixup=0.0, copy_paste=0.0, copy_paste_mode=flip, auto_augment=randaugment, erasing=0.4, crop_fraction=1.0, cfg=None, tracker=botsort.yaml, save_dir=/home/ubuntu/cv_runs/cv/cv_runs/EA/ultralytics/runs/classify/train\cf1\highlight2 
+\par \cf3\highlight0 train:\cf0  /home/ubuntu/cv_runs/cv/cv_runs/EA/ultralytics/data/train... found 6101 images in 4 classes \u9989?\cf1\highlight2 
+\par \cf3\highlight0 val:\cf0  /home/ubuntu/cv_runs/cv/cv_runs/EA/ultralytics/data/val... found 714 images in 4 classes \u9989?\cf1\highlight2 
+\par \cf3\highlight0 test:\cf0  /home/ubuntu/cv_runs/cv/cv_runs/EA/ultralytics/data/test... found 357 images in 4 classes \u9989?\cf1\highlight2 
+\par \cf0\highlight0 Overriding model.yaml nc=1000 with nc=4\cf1\highlight2 
+\par 
+\par \cf0\highlight0                    from  n    params  module                                       arguments\cf1\highlight2 
+\par \cf0\highlight0   0                  -1  1       464  ultralytics.nn.modules.conv.Conv             [3, 16, 3, 2]\cf1\highlight2 
+\par \cf0\highlight0   1                  -1  1      4672  ultralytics.nn.modules.conv.Conv             [16, 32, 3, 2]\cf1\highlight2 
+\par \cf0\highlight0   2                  -1  1      6640  ultralytics.nn.modules.block.C3k2            [32, 64, 1, False, 0.25]\cf1\highlight2 
+\par \cf0\highlight0   3                  -1  1     36992  ultralytics.nn.modules.conv.Conv             [64, 64, 3, 2]\cf1\highlight2 
+\par \cf0\highlight0   4                  -1  1     26080  ultralytics.nn.modules.block.C3k2            [64, 128, 1, False, 0.25]\cf1\highlight2 
+\par \cf0\highlight0   5                  -1  1    147712  ultralytics.nn.modules.conv.Conv             [128, 128, 3, 2]\cf1\highlight2 
+\par \cf0\highlight0   6                  -1  1     87040  ultralytics.nn.modules.block.C3k2            [128, 128, 1, True]\cf1\highlight2 
+\par \cf0\highlight0   7                  -1  1    295424  ultralytics.nn.modules.conv.Conv             [128, 256, 3, 2]\cf1\highlight2 
+\par \cf0\highlight0   8                  -1  1    346112  ultralytics.nn.modules.block.C3k2            [256, 256, 1, True]\cf1\highlight2 
+\par \cf0\highlight0   9                  -1  1    302592  ultralytics.nn.modules.block.C2PSA           [256, 256, 1]\cf1\highlight2 
+\par \cf0\highlight0  10                  -1  1    335364  ultralytics.nn.modules.head.Classify         [256, 4]\cf1\highlight2 
+\par \cf0\highlight0 YOLO11n-cls summary: 92 layers, 1,589,092 parameters, 1,589,092 gradients\cf1\highlight2 
+\par \cf0\highlight0 Transferred 240/242 items from pretrained weights\cf1\highlight2 
+\par \cf3\highlight0 AMP: \cf0 running Automatic Mixed Precision (AMP) checks...\cf1\highlight2 
+\par \cf3\highlight0 AMP: \cf0 checks skipped \u9888?\cf4\highlight5\u65039?\cf0\highlight0 . Unable to load YOLO11n for AMP checks due to possible Ultralytics package modifications. Setting 'amp=True'. If you experience zero-mAP or NaN losses you can disable AMP with amp=False.\cf1\highlight2 
+\par \cf3\highlight0 train: \cf0 Scanning /home/ubuntu/cv_runs/cv/cv_runs/EA/ultralytics/data/train... 6101 images, 0 corrupt: 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 6101/6101 [00:02<00:00\cf1\highlight2 
+\par \cf3\highlight0 train: \cf0 New cache created: /home/ubuntu/cv_runs/cv/cv_runs/EA/ultralytics/data/train.cache\cf1\highlight2 
+\par \cf3\highlight0 val: \cf0 Scanning /home/ubuntu/cv_runs/cv/cv_runs/EA/ultralytics/data/val... 714 images, 0 corrupt: 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 714/714 [00:00<00:00, 2358.\cf1\highlight2 
+\par \cf3\highlight0 val: \cf0 New cache created: /home/ubuntu/cv_runs/cv/cv_runs/EA/ultralytics/data/val.cache\cf1\highlight2 
+\par \cf3\highlight0 optimizer:\cf0  SGD(lr=0.0001, momentum=0.937) with parameter groups 40 weight(decay=0.0), 44 weight(decay=0.0005), 41 bias(decay=0.0)\cf1\highlight2 
+\par \cf0\highlight0 Image sizes 512 train, 512 val\cf1\highlight2 
+\par \cf0\highlight0 Using 8 dataloader workers\cf1\highlight2 
+\par \cf0\highlight0 Logging results to \b /home/ubuntu/cv_runs/cv/cv_runs/EA/ultralytics/runs/classify/train\cf1\highlight2\b0 
+\par \cf0\highlight0 Starting training for 50 epochs...\cf1\highlight2 
+\par 
+\par \cf0\highlight0       Epoch    GPU_mem       loss  Instances       Size\cf1\highlight2 
+\par \cf0\highlight0   0%|          | 0/382 [00:00<?, ?it/s]/usr/local/lib/python3.10/dist-packages/torch/autograd/graph.py:768: UserWarning: upsample_bilinear2d_aa_backward_out_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:83.)\cf1\highlight2 
+\par \cf0\highlight0   return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass\cf1\highlight2 
+\par \cf0\highlight0        1/50      0.98G      1.425         16        512:   1%|          | 2/382 [00:01<04:22,  1.45it/s]/usr/local/lib/python3.10/dist-packages/torch/autograd/graph.py:768: UserWarning: upsample_bilinear2d_aa_backward_out_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:83.)\cf1\highlight2 
+\par \cf0\highlight0   return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass\cf1\highlight2 
+\par \cf0\highlight0        1/50      1.17G       1.26         16        512:   8%|\u9610?         | 31/382 [00:03<00:17, 20.38it/s]Downloading https://ultralytics.com/assets/Arial.ttf to '/home/ubuntu/.config/Ultralytics/Arial.ttf'...\cf1\highlight2 
+\par \cf0\highlight0 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 755k/755k [00:00<00:00, 28.6MB/s]\cf1\highlight2 
+\par \cf0\highlight0        1/50      1.17G     0.9958          5        512: 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 382/382 [00:17<00:00, 21.26it/s]       | 0.00/755k [00:00<?, ?B/s]\cf1\highlight2 
+\par \cf0\highlight0                classes   top1_acc   top5_acc: 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 23/23 [00:00<00:00, 26.51it/s]\cf1\highlight2 
+\par \cf0\highlight0                    all      0.693          1\cf1\highlight2 
+\par 
+\par \cf0\highlight0       Epoch    GPU_mem       loss  Instances       Size\cf1\highlight2 
+\par \cf0\highlight0   0%|          | 0/382 [00:00<?, ?it/s]/usr/local/lib/python3.10/dist-packages/torch/autograd/graph.py:768: UserWarning: upsample_bilinear2d_aa_backward_out_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:83.)\cf1\highlight2 
+\par \cf0\highlight0   return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass\cf1\highlight2 
+\par \cf0\highlight0        2/50      1.18G     0.7416          5        512: 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 382/382 [00:15<00:00, 24.17it/s]\cf1\highlight2 
+\par \cf0\highlight0                classes   top1_acc   top5_acc: 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 23/23 [00:00<00:00, 27.40it/s]\cf1\highlight2 
+\par \cf0\highlight0                    all      0.737          1\cf1\highlight2 
+\par 
+\par \cf0\highlight0       Epoch    GPU_mem       loss  Instances       Size\cf1\highlight2 
+\par \cf0\highlight0   0%|          | 0/382 [00:00<?, ?it/s]/usr/local/lib/python3.10/dist-packages/torch/autograd/graph.py:768: UserWarning: upsample_bilinear2d_aa_backward_out_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:83.)\cf1\highlight2 
+\par \cf0\highlight0   return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass\cf1\highlight2 
+\par \cf0\highlight0        3/50      1.18G     0.6374          5        512: 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 382/382 [00:15<00:00, 24.59it/s]\cf1\highlight2 
+\par \cf0\highlight0                classes   top1_acc   top5_acc: 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 23/23 [00:00<00:00, 29.57it/s]\cf1\highlight2 
+\par \cf0\highlight0                    all      0.755          1\cf1\highlight2 
+\par 
+\par \cf0\highlight0       Epoch    GPU_mem       loss  Instances       Size\cf1\highlight2 
+\par \cf0\highlight0   0%|          | 0/382 [00:00<?, ?it/s]/usr/local/lib/python3.10/dist-packages/torch/autograd/graph.py:768: UserWarning: upsample_bilinear2d_aa_backward_out_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:83.)\cf1\highlight2 
+\par \cf0\highlight0   return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass\cf1\highlight2 
+\par \cf0\highlight0        4/50      1.18G     0.5739          5        512: 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 382/382 [00:15<00:00, 24.58it/s]\cf1\highlight2 
+\par \cf0\highlight0                classes   top1_acc   top5_acc: 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 23/23 [00:00<00:00, 28.53it/s]\cf1\highlight2 
+\par \cf0\highlight0                    all      0.798          1\cf1\highlight2 
+\par 
+\par \cf0\highlight0       Epoch    GPU_mem       loss  Instances       Size\cf1\highlight2 
+\par \cf0\highlight0   0%|          | 0/382 [00:00<?, ?it/s]/usr/local/lib/python3.10/dist-packages/torch/autograd/graph.py:768: UserWarning: upsample_bilinear2d_aa_backward_out_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:83.)\cf1\highlight2 
+\par \cf0\highlight0   return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass\cf1\highlight2 
+\par \cf0\highlight0        5/50      1.18G     0.5289          5        512: 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 382/382 [00:15<00:00, 24.04it/s]\cf1\highlight2 
+\par \cf0\highlight0                classes   top1_acc   top5_acc: 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 23/23 [00:00<00:00, 26.99it/s]\cf1\highlight2 
+\par \cf0\highlight0                    all      0.818          1\cf1\highlight2 
+\par 
+\par \cf0\highlight0       Epoch    GPU_mem       loss  Instances       Size\cf1\highlight2 
+\par \cf0\highlight0   0%|          | 0/382 [00:00<?, ?it/s]/usr/local/lib/python3.10/dist-packages/torch/autograd/graph.py:768: UserWarning: upsample_bilinear2d_aa_backward_out_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:83.)\cf1\highlight2 
+\par \cf0\highlight0   return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass\cf1\highlight2 
+\par \cf0\highlight0        6/50      1.18G     0.5129          5        512: 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 382/382 [00:15<00:00, 24.26it/s]\cf1\highlight2 
+\par \cf0\highlight0                classes   top1_acc   top5_acc: 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 23/23 [00:00<00:00, 26.44it/s]\cf1\highlight2 
+\par \cf0\highlight0                    all      0.833          1\cf1\highlight2 
+\par 
+\par \cf0\highlight0       Epoch    GPU_mem       loss  Instances       Size\cf1\highlight2 
+\par \cf0\highlight0   0%|          | 0/382 [00:00<?, ?it/s]/usr/local/lib/python3.10/dist-packages/torch/autograd/graph.py:768: UserWarning: upsample_bilinear2d_aa_backward_out_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:83.)\cf1\highlight2 
+\par \cf0\highlight0   return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass\cf1\highlight2 
+\par \cf0\highlight0        7/50      1.18G     0.4913          5        512: 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 382/382 [00:15<00:00, 24.69it/s]\cf1\highlight2 
+\par \cf0\highlight0                classes   top1_acc   top5_acc: 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 23/23 [00:00<00:00, 28.05it/s]\cf1\highlight2 
+\par \cf0\highlight0                    all      0.845          1\cf1\highlight2 
+\par 
+\par \cf0\highlight0       Epoch    GPU_mem       loss  Instances       Size\cf1\highlight2 
+\par \cf0\highlight0   0%|          | 0/382 [00:00<?, ?it/s]/usr/local/lib/python3.10/dist-packages/torch/autograd/graph.py:768: UserWarning: upsample_bilinear2d_aa_backward_out_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:83.)\cf1\highlight2 
+\par \cf0\highlight0   return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass\cf1\highlight2 
+\par \cf0\highlight0        8/50      1.18G     0.4692          5        512: 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 382/382 [00:15<00:00, 24.35it/s]\cf1\highlight2 
+\par \cf0\highlight0                classes   top1_acc   top5_acc: 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 23/23 [00:00<00:00, 29.83it/s]\cf1\highlight2 
+\par \cf0\highlight0                    all      0.838          1\cf1\highlight2 
+\par 
+\par \cf0\highlight0       Epoch    GPU_mem       loss  Instances       Size\cf1\highlight2 
+\par \cf0\highlight0   0%|          | 0/382 [00:00<?, ?it/s]/usr/local/lib/python3.10/dist-packages/torch/autograd/graph.py:768: UserWarning: upsample_bilinear2d_aa_backward_out_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:83.)\cf1\highlight2 
+\par \cf0\highlight0   return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass\cf1\highlight2 
+\par \cf0\highlight0        9/50      1.18G     0.4645          5        512: 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 382/382 [00:16<00:00, 23.81it/s]\cf1\highlight2 
+\par \cf0\highlight0                classes   top1_acc   top5_acc: 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 23/23 [00:00<00:00, 30.13it/s]\cf1\highlight2 
+\par \cf0\highlight0                    all      0.835          1\cf1\highlight2 
+\par 
+\par \cf0\highlight0       Epoch    GPU_mem       loss  Instances       Size\cf1\highlight2 
+\par \cf0\highlight0   0%|          | 0/382 [00:00<?, ?it/s]/usr/local/lib/python3.10/dist-packages/torch/autograd/graph.py:768: UserWarning: upsample_bilinear2d_aa_backward_out_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:83.)\cf1\highlight2 
+\par \cf0\highlight0   return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass\cf1\highlight2 
+\par \cf0\highlight0       10/50      1.18G     0.4493          5        512: 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 382/382 [00:15<00:00, 23.92it/s]\cf1\highlight2 
+\par \cf0\highlight0                classes   top1_acc   top5_acc: 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 23/23 [00:00<00:00, 31.12it/s]\cf1\highlight2 
+\par \cf0\highlight0                    all       0.84          1\cf1\highlight2 
+\par 
+\par \cf0\highlight0       Epoch    GPU_mem       loss  Instances       Size\cf1\highlight2 
+\par \cf0\highlight0   0%|          | 0/382 [00:00<?, ?it/s]/usr/local/lib/python3.10/dist-packages/torch/autograd/graph.py:768: UserWarning: upsample_bilinear2d_aa_backward_out_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:83.)\cf1\highlight2 
+\par \cf0\highlight0   return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass\cf1\highlight2 
+\par \cf0\highlight0       11/50      1.18G     0.4592          5        512: 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 382/382 [00:15<00:00, 24.57it/s]\cf1\highlight2 
+\par \cf0\highlight0                classes   top1_acc   top5_acc: 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 23/23 [00:00<00:00, 29.93it/s]\cf1\highlight2 
+\par \cf0\highlight0                    all      0.846          1\cf1\highlight2 
+\par 
+\par \cf0\highlight0       Epoch    GPU_mem       loss  Instances       Size\cf1\highlight2 
+\par \cf0\highlight0   0%|          | 0/382 [00:00<?, ?it/s]/usr/local/lib/python3.10/dist-packages/torch/autograd/graph.py:768: UserWarning: upsample_bilinear2d_aa_backward_out_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:83.)\cf1\highlight2 
+\par \cf0\highlight0   return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass\cf1\highlight2 
+\par \cf0\highlight0       12/50      1.18G     0.4233          5        512: 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 382/382 [00:15<00:00, 24.85it/s]\cf1\highlight2 
+\par \cf0\highlight0                classes   top1_acc   top5_acc: 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 23/23 [00:00<00:00, 29.90it/s]\cf1\highlight2 
+\par \cf0\highlight0                    all      0.845          1\cf1\highlight2 
+\par 
+\par \cf0\highlight0       Epoch    GPU_mem       loss  Instances       Size\cf1\highlight2 
+\par \cf0\highlight0   0%|          | 0/382 [00:00<?, ?it/s]/usr/local/lib/python3.10/dist-packages/torch/autograd/graph.py:768: UserWarning: upsample_bilinear2d_aa_backward_out_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:83.)\cf1\highlight2 
+\par \cf0\highlight0   return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass\cf1\highlight2 
+\par \cf0\highlight0       13/50      1.18G     0.4398          5        512: 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 382/382 [00:15<00:00, 24.71it/s]\cf1\highlight2 
+\par \cf0\highlight0                classes   top1_acc   top5_acc: 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 23/23 [00:00<00:00, 29.36it/s]\cf1\highlight2 
+\par \cf0\highlight0                    all      0.849          1\cf1\highlight2 
+\par 
+\par \cf0\highlight0       Epoch    GPU_mem       loss  Instances       Size\cf1\highlight2 
+\par \cf0\highlight0   0%|          | 0/382 [00:00<?, ?it/s]/usr/local/lib/python3.10/dist-packages/torch/autograd/graph.py:768: UserWarning: upsample_bilinear2d_aa_backward_out_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:83.)\cf1\highlight2 
+\par \cf0\highlight0   return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass\cf1\highlight2 
+\par \cf0\highlight0       14/50      1.18G     0.4295          5        512: 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 382/382 [00:15<00:00, 24.69it/s]\cf1\highlight2 
+\par \cf0\highlight0                classes   top1_acc   top5_acc: 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 23/23 [00:00<00:00, 29.78it/s]\cf1\highlight2 
+\par \cf0\highlight0                    all      0.849          1\cf1\highlight2 
+\par 
+\par \cf0\highlight0       Epoch    GPU_mem       loss  Instances       Size\cf1\highlight2 
+\par \cf0\highlight0   0%|          | 0/382 [00:00<?, ?it/s]/usr/local/lib/python3.10/dist-packages/torch/autograd/graph.py:768: UserWarning: upsample_bilinear2d_aa_backward_out_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:83.)\cf1\highlight2 
+\par \cf0\highlight0   return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass\cf1\highlight2 
+\par \cf0\highlight0       15/50      1.18G     0.4164          5        512: 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 382/382 [00:15<00:00, 24.91it/s]\cf1\highlight2 
+\par \cf0\highlight0                classes   top1_acc   top5_acc: 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 23/23 [00:00<00:00, 29.31it/s]\cf1\highlight2 
+\par \cf0\highlight0                    all      0.857          1\cf1\highlight2 
+\par 
+\par \cf0\highlight0       Epoch    GPU_mem       loss  Instances       Size\cf1\highlight2 
+\par \cf0\highlight0   0%|          | 0/382 [00:00<?, ?it/s]/usr/local/lib/python3.10/dist-packages/torch/autograd/graph.py:768: UserWarning: upsample_bilinear2d_aa_backward_out_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:83.)\cf1\highlight2 
+\par \cf0\highlight0   return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass\cf1\highlight2 
+\par \cf0\highlight0       16/50      1.18G     0.4102          5        512: 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 382/382 [00:15<00:00, 25.12it/s]\cf1\highlight2 
+\par \cf0\highlight0                classes   top1_acc   top5_acc: 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 23/23 [00:00<00:00, 30.05it/s]\cf1\highlight2 
+\par \cf0\highlight0                    all      0.845          1\cf1\highlight2 
+\par 
+\par \cf0\highlight0       Epoch    GPU_mem       loss  Instances       Size\cf1\highlight2 
+\par \cf0\highlight0   0%|          | 0/382 [00:00<?, ?it/s]/usr/local/lib/python3.10/dist-packages/torch/autograd/graph.py:768: UserWarning: upsample_bilinear2d_aa_backward_out_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:83.)\cf1\highlight2 
+\par \cf0\highlight0   return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass\cf1\highlight2 
+\par \cf0\highlight0       17/50      1.18G     0.4096          5        512: 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 382/382 [00:15<00:00, 24.90it/s]\cf1\highlight2 
+\par \cf0\highlight0                classes   top1_acc   top5_acc: 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 23/23 [00:00<00:00, 27.85it/s]\cf1\highlight2 
+\par \cf0\highlight0                    all      0.849          1\cf1\highlight2 
+\par 
+\par \cf0\highlight0       Epoch    GPU_mem       loss  Instances       Size\cf1\highlight2 
+\par \cf0\highlight0   0%|          | 0/382 [00:00<?, ?it/s]/usr/local/lib/python3.10/dist-packages/torch/autograd/graph.py:768: UserWarning: upsample_bilinear2d_aa_backward_out_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:83.)\cf1\highlight2 
+\par \cf0\highlight0   return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass\cf1\highlight2 
+\par \cf0\highlight0       18/50      1.18G     0.4107          5        512: 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 382/382 [00:15<00:00, 25.36it/s]\cf1\highlight2 
+\par \cf0\highlight0                classes   top1_acc   top5_acc: 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 23/23 [00:00<00:00, 29.76it/s]\cf1\highlight2 
+\par \cf0\highlight0                    all       0.85          1\cf1\highlight2 
+\par 
+\par \cf0\highlight0       Epoch    GPU_mem       loss  Instances       Size\cf1\highlight2 
+\par \cf0\highlight0   0%|          | 0/382 [00:00<?, ?it/s]/usr/local/lib/python3.10/dist-packages/torch/autograd/graph.py:768: UserWarning: upsample_bilinear2d_aa_backward_out_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:83.)\cf1\highlight2 
+\par \cf0\highlight0   return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass\cf1\highlight2 
+\par \cf0\highlight0       19/50      1.18G     0.3948          5        512: 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 382/382 [00:14<00:00, 25.58it/s]\cf1\highlight2 
+\par \cf0\highlight0                classes   top1_acc   top5_acc: 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 23/23 [00:00<00:00, 30.02it/s]\cf1\highlight2 
+\par \cf0\highlight0                    all      0.856          1\cf1\highlight2 
+\par 
+\par \cf0\highlight0       Epoch    GPU_mem       loss  Instances       Size\cf1\highlight2 
+\par \cf0\highlight0   0%|          | 0/382 [00:00<?, ?it/s]/usr/local/lib/python3.10/dist-packages/torch/autograd/graph.py:768: UserWarning: upsample_bilinear2d_aa_backward_out_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:83.)\cf1\highlight2 
+\par \cf0\highlight0   return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass\cf1\highlight2 
+\par \cf0\highlight0       20/50      1.18G     0.3958          5        512: 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 382/382 [00:15<00:00, 25.33it/s]\cf1\highlight2 
+\par \cf0\highlight0                classes   top1_acc   top5_acc: 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 23/23 [00:00<00:00, 30.39it/s]\cf1\highlight2 
+\par \cf0\highlight0                    all      0.856          1\cf1\highlight2 
+\par 
+\par \cf0\highlight0       Epoch    GPU_mem       loss  Instances       Size\cf1\highlight2 
+\par \cf0\highlight0   0%|          | 0/382 [00:00<?, ?it/s]/usr/local/lib/python3.10/dist-packages/torch/autograd/graph.py:768: UserWarning: upsample_bilinear2d_aa_backward_out_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:83.)\cf1\highlight2 
+\par \cf0\highlight0   return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass\cf1\highlight2 
+\par \cf0\highlight0       21/50      1.18G     0.3961          5        512: 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 382/382 [00:15<00:00, 25.24it/s]\cf1\highlight2 
+\par \cf0\highlight0                classes   top1_acc   top5_acc: 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 23/23 [00:00<00:00, 29.00it/s]\cf1\highlight2 
+\par \cf0\highlight0                    all      0.853          1\cf1\highlight2 
+\par 
+\par \cf0\highlight0       Epoch    GPU_mem       loss  Instances       Size\cf1\highlight2 
+\par \cf0\highlight0   0%|          | 0/382 [00:00<?, ?it/s]/usr/local/lib/python3.10/dist-packages/torch/autograd/graph.py:768: UserWarning: upsample_bilinear2d_aa_backward_out_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:83.)\cf1\highlight2 
+\par \cf0\highlight0   return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass\cf1\highlight2 
+\par \cf0\highlight0       22/50      1.18G     0.3849          5        512: 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 382/382 [00:15<00:00, 24.66it/s]\cf1\highlight2 
+\par \cf0\highlight0                classes   top1_acc   top5_acc: 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 23/23 [00:00<00:00, 30.91it/s]\cf1\highlight2 
+\par \cf0\highlight0                    all      0.836          1\cf1\highlight2 
+\par 
+\par \cf0\highlight0       Epoch    GPU_mem       loss  Instances       Size\cf1\highlight2 
+\par \cf0\highlight0   0%|          | 0/382 [00:00<?, ?it/s]/usr/local/lib/python3.10/dist-packages/torch/autograd/graph.py:768: UserWarning: upsample_bilinear2d_aa_backward_out_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:83.)\cf1\highlight2 
+\par \cf0\highlight0   return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass\cf1\highlight2 
+\par \cf0\highlight0       23/50      1.18G     0.3788          5        512: 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 382/382 [00:14<00:00, 25.64it/s]\cf1\highlight2 
+\par \cf0\highlight0                classes   top1_acc   top5_acc: 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 23/23 [00:00<00:00, 28.63it/s]\cf1\highlight2 
+\par \cf0\highlight0                    all      0.857          1\cf1\highlight2 
+\par 
+\par \cf0\highlight0       Epoch    GPU_mem       loss  Instances       Size\cf1\highlight2 
+\par \cf0\highlight0   0%|          | 0/382 [00:00<?, ?it/s]/usr/local/lib/python3.10/dist-packages/torch/autograd/graph.py:768: UserWarning: upsample_bilinear2d_aa_backward_out_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:83.)\cf1\highlight2 
+\par \cf0\highlight0   return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass\cf1\highlight2 
+\par \cf0\highlight0       24/50      1.18G     0.3738          5        512: 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 382/382 [00:14<00:00, 25.66it/s]\cf1\highlight2 
+\par \cf0\highlight0                classes   top1_acc   top5_acc: 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 23/23 [00:00<00:00, 31.49it/s]\cf1\highlight2 
+\par \cf0\highlight0                    all      0.852          1\cf1\highlight2 
+\par 
+\par \cf0\highlight0       Epoch    GPU_mem       loss  Instances       Size\cf1\highlight2 
+\par \cf0\highlight0   0%|          | 0/382 [00:00<?, ?it/s]/usr/local/lib/python3.10/dist-packages/torch/autograd/graph.py:768: UserWarning: upsample_bilinear2d_aa_backward_out_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:83.)\cf1\highlight2 
+\par \cf0\highlight0   return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass\cf1\highlight2 
+\par \cf0\highlight0       25/50      1.18G     0.3775          5        512: 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 382/382 [00:15<00:00, 24.55it/s]\cf1\highlight2 
+\par \cf0\highlight0                classes   top1_acc   top5_acc: 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 23/23 [00:00<00:00, 31.03it/s]\cf1\highlight2 
+\par \cf0\highlight0                    all      0.853          1\cf1\highlight2 
+\par 
+\par \cf0\highlight0       Epoch    GPU_mem       loss  Instances       Size\cf1\highlight2 
+\par \cf0\highlight0   0%|          | 0/382 [00:00<?, ?it/s]/usr/local/lib/python3.10/dist-packages/torch/autograd/graph.py:768: UserWarning: upsample_bilinear2d_aa_backward_out_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:83.)\cf1\highlight2 
+\par \cf0\highlight0   return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass\cf1\highlight2 
+\par \cf0\highlight0       26/50      1.18G     0.3725          5        512: 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 382/382 [00:15<00:00, 24.07it/s]\cf1\highlight2 
+\par \cf0\highlight0                classes   top1_acc   top5_acc: 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 23/23 [00:00<00:00, 30.63it/s]\cf1\highlight2 
+\par \cf0\highlight0                    all       0.85          1\cf1\highlight2 
+\par 
+\par \cf0\highlight0       Epoch    GPU_mem       loss  Instances       Size\cf1\highlight2 
+\par \cf0\highlight0   0%|          | 0/382 [00:00<?, ?it/s]/usr/local/lib/python3.10/dist-packages/torch/autograd/graph.py:768: UserWarning: upsample_bilinear2d_aa_backward_out_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:83.)\cf1\highlight2 
+\par \cf0\highlight0   return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass\cf1\highlight2 
+\par \cf0\highlight0       27/50      1.18G     0.3792          5        512: 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 382/382 [00:15<00:00, 24.59it/s]\cf1\highlight2 
+\par \cf0\highlight0                classes   top1_acc   top5_acc: 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 23/23 [00:00<00:00, 28.83it/s]\cf1\highlight2 
+\par \cf0\highlight0                    all      0.854          1\cf1\highlight2 
+\par 
+\par \cf0\highlight0       Epoch    GPU_mem       loss  Instances       Size\cf1\highlight2 
+\par \cf0\highlight0   0%|          | 0/382 [00:00<?, ?it/s]/usr/local/lib/python3.10/dist-packages/torch/autograd/graph.py:768: UserWarning: upsample_bilinear2d_aa_backward_out_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:83.)\cf1\highlight2 
+\par \cf0\highlight0   return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass\cf1\highlight2 
+\par \cf0\highlight0       28/50      1.18G     0.3715          5        512: 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 382/382 [00:15<00:00, 24.36it/s]\cf1\highlight2 
+\par \cf0\highlight0                classes   top1_acc   top5_acc: 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 23/23 [00:00<00:00, 31.44it/s]\cf1\highlight2 
+\par \cf0\highlight0                    all      0.856          1\cf1\highlight2 
+\par 
+\par \cf0\highlight0       Epoch    GPU_mem       loss  Instances       Size\cf1\highlight2 
+\par \cf0\highlight0   0%|          | 0/382 [00:00<?, ?it/s]/usr/local/lib/python3.10/dist-packages/torch/autograd/graph.py:768: UserWarning: upsample_bilinear2d_aa_backward_out_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:83.)\cf1\highlight2 
+\par \cf0\highlight0   return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass\cf1\highlight2 
+\par \cf0\highlight0       29/50      1.18G     0.3733          5        512: 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 382/382 [00:15<00:00, 24.52it/s]\cf1\highlight2 
+\par \cf0\highlight0                classes   top1_acc   top5_acc: 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 23/23 [00:00<00:00, 29.85it/s]\cf1\highlight2 
+\par \cf0\highlight0                    all       0.85          1\cf1\highlight2 
+\par 
+\par \cf0\highlight0       Epoch    GPU_mem       loss  Instances       Size\cf1\highlight2 
+\par \cf0\highlight0   0%|          | 0/382 [00:00<?, ?it/s]/usr/local/lib/python3.10/dist-packages/torch/autograd/graph.py:768: UserWarning: upsample_bilinear2d_aa_backward_out_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:83.)\cf1\highlight2 
+\par \cf0\highlight0   return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass\cf1\highlight2 
+\par \cf0\highlight0       30/50      1.18G      0.358          5        512: 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 382/382 [00:15<00:00, 24.73it/s]\cf1\highlight2 
+\par \cf0\highlight0                classes   top1_acc   top5_acc: 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 23/23 [00:00<00:00, 30.23it/s]\cf1\highlight2 
+\par \cf0\highlight0                    all      0.849          1\cf1\highlight2 
+\par 
+\par \cf0\highlight0       Epoch    GPU_mem       loss  Instances       Size\cf1\highlight2 
+\par \cf0\highlight0   0%|          | 0/382 [00:00<?, ?it/s]/usr/local/lib/python3.10/dist-packages/torch/autograd/graph.py:768: UserWarning: upsample_bilinear2d_aa_backward_out_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:83.)\cf1\highlight2 
+\par \cf0\highlight0   return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass\cf1\highlight2 
+\par \cf0\highlight0       31/50      1.18G     0.3676          5        512: 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 382/382 [00:15<00:00, 25.45it/s]\cf1\highlight2 
+\par \cf0\highlight0                classes   top1_acc   top5_acc: 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 23/23 [00:00<00:00, 30.90it/s]\cf1\highlight2 
+\par \cf0\highlight0                    all      0.853          1\cf1\highlight2 
+\par 
+\par \cf0\highlight0       Epoch    GPU_mem       loss  Instances       Size\cf1\highlight2 
+\par \cf0\highlight0   0%|          | 0/382 [00:00<?, ?it/s]/usr/local/lib/python3.10/dist-packages/torch/autograd/graph.py:768: UserWarning: upsample_bilinear2d_aa_backward_out_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:83.)\cf1\highlight2 
+\par \cf0\highlight0   return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass\cf1\highlight2 
+\par \cf0\highlight0       32/50      1.18G     0.3609          5        512: 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 382/382 [00:15<00:00, 24.18it/s]\cf1\highlight2 
+\par \cf0\highlight0                classes   top1_acc   top5_acc: 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 23/23 [00:00<00:00, 28.63it/s]\cf1\highlight2 
+\par \cf0\highlight0                    all      0.856          1\cf1\highlight2 
+\par 
+\par \cf0\highlight0       Epoch    GPU_mem       loss  Instances       Size\cf1\highlight2 
+\par \cf0\highlight0   0%|          | 0/382 [00:00<?, ?it/s]/usr/local/lib/python3.10/dist-packages/torch/autograd/graph.py:768: UserWarning: upsample_bilinear2d_aa_backward_out_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:83.)\cf1\highlight2 
+\par \cf0\highlight0   return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass\cf1\highlight2 
+\par \cf0\highlight0       33/50      1.18G     0.3539          5        512: 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 382/382 [00:16<00:00, 23.57it/s]\cf1\highlight2 
+\par \cf0\highlight0                classes   top1_acc   top5_acc: 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 23/23 [00:00<00:00, 30.51it/s]\cf1\highlight2 
+\par \cf0\highlight0                    all      0.857          1\cf1\highlight2 
+\par 
+\par \cf0\highlight0       Epoch    GPU_mem       loss  Instances       Size\cf1\highlight2 
+\par \cf0\highlight0   0%|          | 0/382 [00:00<?, ?it/s]/usr/local/lib/python3.10/dist-packages/torch/autograd/graph.py:768: UserWarning: upsample_bilinear2d_aa_backward_out_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:83.)\cf1\highlight2 
+\par \cf0\highlight0   return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass\cf1\highlight2 
+\par \cf0\highlight0       34/50      1.18G     0.3564          5        512: 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 382/382 [00:16<00:00, 23.63it/s]\cf1\highlight2 
+\par \cf0\highlight0                classes   top1_acc   top5_acc: 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 23/23 [00:00<00:00, 29.23it/s]\cf1\highlight2 
+\par \cf0\highlight0                    all      0.849          1\cf1\highlight2 
+\par 
+\par \cf0\highlight0       Epoch    GPU_mem       loss  Instances       Size\cf1\highlight2 
+\par \cf0\highlight0   0%|          | 0/382 [00:00<?, ?it/s]/usr/local/lib/python3.10/dist-packages/torch/autograd/graph.py:768: UserWarning: upsample_bilinear2d_aa_backward_out_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:83.)\cf1\highlight2 
+\par \cf0\highlight0   return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass\cf1\highlight2 
+\par \cf0\highlight0       35/50      1.18G     0.3529          5        512: 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 382/382 [00:15<00:00, 23.95it/s]\cf1\highlight2 
+\par \cf0\highlight0                classes   top1_acc   top5_acc: 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 23/23 [00:00<00:00, 28.82it/s]\cf1\highlight2 
+\par \cf0\highlight0                    all      0.852          1\cf1\highlight2 
+\par 
+\par \cf0\highlight0       Epoch    GPU_mem       loss  Instances       Size\cf1\highlight2 
+\par \cf0\highlight0   0%|          | 0/382 [00:00<?, ?it/s]/usr/local/lib/python3.10/dist-packages/torch/autograd/graph.py:768: UserWarning: upsample_bilinear2d_aa_backward_out_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:83.)\cf1\highlight2 
+\par \cf0\highlight0   return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass\cf1\highlight2 
+\par \cf0\highlight0       36/50      1.18G     0.3577          5        512: 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 382/382 [00:15<00:00, 23.97it/s]\cf1\highlight2 
+\par \cf0\highlight0                classes   top1_acc   top5_acc: 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 23/23 [00:00<00:00, 29.13it/s]\cf1\highlight2 
+\par \cf0\highlight0                    all      0.853          1\cf1\highlight2 
+\par 
+\par \cf0\highlight0       Epoch    GPU_mem       loss  Instances       Size\cf1\highlight2 
+\par \cf0\highlight0   0%|          | 0/382 [00:00<?, ?it/s]/usr/local/lib/python3.10/dist-packages/torch/autograd/graph.py:768: UserWarning: upsample_bilinear2d_aa_backward_out_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:83.)\cf1\highlight2 
+\par \cf0\highlight0   return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass\cf1\highlight2 
+\par \cf0\highlight0       37/50      1.18G     0.3525          5        512: 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 382/382 [00:16<00:00, 23.67it/s]\cf1\highlight2 
+\par \cf0\highlight0                classes   top1_acc   top5_acc: 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 23/23 [00:00<00:00, 30.65it/s]\cf1\highlight2 
+\par \cf0\highlight0                    all       0.85          1\cf1\highlight2 
+\par 
+\par \cf0\highlight0       Epoch    GPU_mem       loss  Instances       Size\cf1\highlight2 
+\par \cf0\highlight0   0%|          | 0/382 [00:00<?, ?it/s]/usr/local/lib/python3.10/dist-packages/torch/autograd/graph.py:768: UserWarning: upsample_bilinear2d_aa_backward_out_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:83.)\cf1\highlight2 
+\par \cf0\highlight0   return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass\cf1\highlight2 
+\par \cf0\highlight0       38/50      1.18G     0.3577          5        512: 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 382/382 [00:15<00:00, 24.74it/s]\cf1\highlight2 
+\par \cf0\highlight0                classes   top1_acc   top5_acc: 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 23/23 [00:00<00:00, 28.99it/s]\cf1\highlight2 
+\par \cf0\highlight0                    all      0.847          1\cf1\highlight2 
+\par 
+\par \cf0\highlight0       Epoch    GPU_mem       loss  Instances       Size\cf1\highlight2 
+\par \cf0\highlight0   0%|          | 0/382 [00:00<?, ?it/s]/usr/local/lib/python3.10/dist-packages/torch/autograd/graph.py:768: UserWarning: upsample_bilinear2d_aa_backward_out_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:83.)\cf1\highlight2 
+\par \cf0\highlight0   return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass\cf1\highlight2 
+\par \cf0\highlight0       39/50      1.18G     0.3471          5        512: 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 382/382 [00:15<00:00, 24.61it/s]\cf1\highlight2 
+\par \cf0\highlight0                classes   top1_acc   top5_acc: 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 23/23 [00:00<00:00, 30.54it/s]\cf1\highlight2 
+\par \cf0\highlight0                    all      0.849          1\cf1\highlight2 
+\par 
+\par \cf0\highlight0       Epoch    GPU_mem       loss  Instances       Size\cf1\highlight2 
+\par \cf0\highlight0   0%|          | 0/382 [00:00<?, ?it/s]/usr/local/lib/python3.10/dist-packages/torch/autograd/graph.py:768: UserWarning: upsample_bilinear2d_aa_backward_out_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:83.)\cf1\highlight2 
+\par \cf0\highlight0   return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass\cf1\highlight2 
+\par \cf0\highlight0       40/50      1.18G     0.3526          5        512: 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 382/382 [00:15<00:00, 24.97it/s]\cf1\highlight2 
+\par \cf0\highlight0                classes   top1_acc   top5_acc: 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 23/23 [00:00<00:00, 31.79it/s]\cf1\highlight2 
+\par \cf0\highlight0                    all       0.85          1\cf1\highlight2 
+\par 
+\par \cf0\highlight0       Epoch    GPU_mem       loss  Instances       Size\cf1\highlight2 
+\par \cf0\highlight0   0%|          | 0/382 [00:00<?, ?it/s]/usr/local/lib/python3.10/dist-packages/torch/autograd/graph.py:768: UserWarning: upsample_bilinear2d_aa_backward_out_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:83.)\cf1\highlight2 
+\par \cf0\highlight0   return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass\cf1\highlight2 
+\par \cf0\highlight0       41/50      1.18G     0.3429          5        512: 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 382/382 [00:15<00:00, 24.89it/s]\cf1\highlight2 
+\par \cf0\highlight0                classes   top1_acc   top5_acc: 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 23/23 [00:00<00:00, 30.79it/s]\cf1\highlight2 
+\par \cf0\highlight0                    all      0.852          1\cf1\highlight2 
+\par 
+\par \cf0\highlight0       Epoch    GPU_mem       loss  Instances       Size\cf1\highlight2 
+\par \cf0\highlight0   0%|          | 0/382 [00:00<?, ?it/s]/usr/local/lib/python3.10/dist-packages/torch/autograd/graph.py:768: UserWarning: upsample_bilinear2d_aa_backward_out_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:83.)\cf1\highlight2 
+\par \cf0\highlight0   return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass\cf1\highlight2 
+\par \cf0\highlight0       42/50      1.18G      0.345          5        512: 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 382/382 [00:15<00:00, 24.86it/s]\cf1\highlight2 
+\par \cf0\highlight0                classes   top1_acc   top5_acc: 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 23/23 [00:00<00:00, 30.29it/s]\cf1\highlight2 
+\par \cf0\highlight0                    all      0.852          1\cf1\highlight2 
+\par 
+\par \cf0\highlight0       Epoch    GPU_mem       loss  Instances       Size\cf1\highlight2 
+\par \cf0\highlight0   0%|          | 0/382 [00:00<?, ?it/s]/usr/local/lib/python3.10/dist-packages/torch/autograd/graph.py:768: UserWarning: upsample_bilinear2d_aa_backward_out_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:83.)\cf1\highlight2 
+\par \cf0\highlight0   return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass\cf1\highlight2 
+\par \cf0\highlight0       43/50      1.18G     0.3374          5        512: 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 382/382 [00:15<00:00, 25.04it/s]\cf1\highlight2 
+\par \cf0\highlight0                classes   top1_acc   top5_acc: 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 23/23 [00:00<00:00, 30.91it/s]\cf1\highlight2 
+\par \cf0\highlight0                    all      0.852          1\cf1\highlight2 
+\par 
+\par \cf0\highlight0       Epoch    GPU_mem       loss  Instances       Size\cf1\highlight2 
+\par \cf0\highlight0   0%|          | 0/382 [00:00<?, ?it/s]/usr/local/lib/python3.10/dist-packages/torch/autograd/graph.py:768: UserWarning: upsample_bilinear2d_aa_backward_out_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:83.)\cf1\highlight2 
+\par \cf0\highlight0   return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass\cf1\highlight2 
+\par \cf0\highlight0       44/50      1.18G     0.3393          5        512: 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 382/382 [00:15<00:00, 24.30it/s]\cf1\highlight2 
+\par \cf0\highlight0                classes   top1_acc   top5_acc: 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 23/23 [00:00<00:00, 30.43it/s]\cf1\highlight2 
+\par \cf0\highlight0                    all      0.849          1\cf1\highlight2 
+\par 
+\par \cf0\highlight0       Epoch    GPU_mem       loss  Instances       Size\cf1\highlight2 
+\par \cf0\highlight0   0%|          | 0/382 [00:00<?, ?it/s]/usr/local/lib/python3.10/dist-packages/torch/autograd/graph.py:768: UserWarning: upsample_bilinear2d_aa_backward_out_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:83.)\cf1\highlight2 
+\par \cf0\highlight0   return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass\cf1\highlight2 
+\par \cf0\highlight0       45/50      1.18G     0.3208          5        512: 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 382/382 [00:15<00:00, 24.76it/s]\cf1\highlight2 
+\par \cf0\highlight0                classes   top1_acc   top5_acc: 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 23/23 [00:00<00:00, 30.76it/s]\cf1\highlight2 
+\par \cf0\highlight0                    all      0.852          1\cf1\highlight2 
+\par 
+\par \cf0\highlight0       Epoch    GPU_mem       loss  Instances       Size\cf1\highlight2 
+\par \cf0\highlight0   0%|          | 0/382 [00:00<?, ?it/s]/usr/local/lib/python3.10/dist-packages/torch/autograd/graph.py:768: UserWarning: upsample_bilinear2d_aa_backward_out_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:83.)\cf1\highlight2 
+\par \cf0\highlight0   return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass\cf1\highlight2 
+\par \cf0\highlight0       46/50      1.18G     0.3523          5        512: 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 382/382 [00:15<00:00, 24.86it/s]\cf1\highlight2 
+\par \cf0\highlight0                classes   top1_acc   top5_acc: 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 23/23 [00:00<00:00, 29.93it/s]\cf1\highlight2 
+\par \cf0\highlight0                    all      0.852          1\cf1\highlight2 
+\par 
+\par \cf0\highlight0       Epoch    GPU_mem       loss  Instances       Size\cf1\highlight2 
+\par \cf0\highlight0   0%|          | 0/382 [00:00<?, ?it/s]/usr/local/lib/python3.10/dist-packages/torch/autograd/graph.py:768: UserWarning: upsample_bilinear2d_aa_backward_out_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:83.)\cf1\highlight2 
+\par \cf0\highlight0   return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass\cf1\highlight2 
+\par \cf0\highlight0       47/50      1.18G     0.3436          5        512: 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 382/382 [00:15<00:00, 24.25it/s]\cf1\highlight2 
+\par \cf0\highlight0                classes   top1_acc   top5_acc: 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 23/23 [00:00<00:00, 31.62it/s]\cf1\highlight2 
+\par \cf0\highlight0                    all       0.85          1\cf1\highlight2 
+\par 
+\par \cf0\highlight0       Epoch    GPU_mem       loss  Instances       Size\cf1\highlight2 
+\par \cf0\highlight0   0%|          | 0/382 [00:00<?, ?it/s]/usr/local/lib/python3.10/dist-packages/torch/autograd/graph.py:768: UserWarning: upsample_bilinear2d_aa_backward_out_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:83.)\cf1\highlight2 
+\par \cf0\highlight0   return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass\cf1\highlight2 
+\par \cf0\highlight0       48/50      1.18G     0.3449          5        512: 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 382/382 [00:15<00:00, 24.63it/s]\cf1\highlight2 
+\par \cf0\highlight0                classes   top1_acc   top5_acc: 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 23/23 [00:00<00:00, 28.22it/s]\cf1\highlight2 
+\par \cf0\highlight0                    all       0.85          1\cf1\highlight2 
+\par 
+\par \cf0\highlight0       Epoch    GPU_mem       loss  Instances       Size\cf1\highlight2 
+\par \cf0\highlight0   0%|          | 0/382 [00:00<?, ?it/s]/usr/local/lib/python3.10/dist-packages/torch/autograd/graph.py:768: UserWarning: upsample_bilinear2d_aa_backward_out_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:83.)\cf1\highlight2 
+\par \cf0\highlight0   return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass\cf1\highlight2 
+\par \cf0\highlight0       49/50      1.18G     0.3426          5        512: 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 382/382 [00:15<00:00, 24.71it/s]\cf1\highlight2 
+\par \cf0\highlight0                classes   top1_acc   top5_acc: 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 23/23 [00:00<00:00, 29.85it/s]\cf1\highlight2 
+\par \cf0\highlight0                    all      0.849          1\cf1\highlight2 
+\par 
+\par \cf0\highlight0       Epoch    GPU_mem       loss  Instances       Size\cf1\highlight2 
+\par \cf0\highlight0   0%|          | 0/382 [00:00<?, ?it/s]/usr/local/lib/python3.10/dist-packages/torch/autograd/graph.py:768: UserWarning: upsample_bilinear2d_aa_backward_out_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:83.)\cf1\highlight2 
+\par \cf0\highlight0   return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass\cf1\highlight2 
+\par \cf0\highlight0       50/50      1.18G     0.3354          5        512: 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 382/382 [00:15<00:00, 24.22it/s]\cf1\highlight2 
+\par \cf0\highlight0                classes   top1_acc   top5_acc: 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 23/23 [00:00<00:00, 28.07it/s]\cf1\highlight2 
+\par \cf0\highlight0                    all      0.852          1\cf1\highlight2 
+\par 
+\par \cf0\highlight0 50 epochs completed in 0.229 hours.\cf1\highlight2 
+\par \cf0\highlight0 Optimizer stripped from /home/ubuntu/cv_runs/cv/cv_runs/EA/ultralytics/runs/classify/train/weights/last.pt, 3.3MB\cf1\highlight2 
+\par \cf0\highlight0 Optimizer stripped from /home/ubuntu/cv_runs/cv/cv_runs/EA/ultralytics/runs/classify/train/weights/best.pt, 3.3MB\cf1\highlight2 
+\par 
+\par \cf0\highlight0 Validating /home/ubuntu/cv_runs/cv/cv_runs/EA/ultralytics/runs/classify/train/weights/best.pt...\cf1\highlight2 
+\par \cf0\highlight0 Ultralytics 8.3.99 \u55357?\u56960? Python-3.10.12 torch-2.4.0+cu121 CUDA:0 (NVIDIA A100-SXM4-40GB, 40326MiB)\cf1\highlight2 
+\par \cf0\highlight0 YOLO11n-cls summary (fused): 53 layers, 1,584,012 parameters, 0 gradients\cf1\highlight2 
+\par \cf3\highlight0 train:\cf0  /home/ubuntu/cv_runs/cv/cv_runs/EA/ultralytics/data/train... found 6101 images in 4 classes \u9989?\cf1\highlight2 
+\par \cf3\highlight0 val:\cf0  /home/ubuntu/cv_runs/cv/cv_runs/EA/ultralytics/data/val... found 714 images in 4 classes \u9989?\cf1\highlight2 
+\par \cf3\highlight0 test:\cf0  /home/ubuntu/cv_runs/cv/cv_runs/EA/ultralytics/data/test... found 357 images in 4 classes \u9989?\cf1\highlight2 
+\par \cf0\highlight0                classes   top1_acc   top5_acc: 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 23/23 [00:01<00:00, 22.30it/s]\cf1\highlight2 
+\par \cf0\highlight0                    all      0.859          1\cf1\highlight2 
+\par \cf0\highlight0 Speed: 0.3ms preprocess, 0.3ms inference, 0.0ms loss, 0.0ms postprocess per image\cf1\highlight2 
+\par \cf0\highlight0 Results saved to \b /home/ubuntu/cv_runs/cv/cv_runs/EA/ultralytics/runs/classify/train\cf1\highlight2\b0 
+\par \cf0\highlight0 Ultralytics 8.3.99 \u55357?\u56960? Python-3.10.12 torch-2.4.0+cu121 CUDA:0 (NVIDIA A100-SXM4-40GB, 40326MiB)\cf1\highlight2 
+\par \cf0\highlight0 YOLO11n-cls summary (fused): 53 layers, 1,584,012 parameters, 0 gradients\cf1\highlight2 
+\par \cf3\highlight0 train:\cf0  /home/ubuntu/cv_runs/cv/cv_runs/EA/ultralytics/vald/train... found 357 images in 4 classes \u9989?\cf1\highlight2 
+\par \cf3\highlight0 val:\cf0  /home/ubuntu/cv_runs/cv/cv_runs/EA/ultralytics/vald/val... found 357 images in 4 classes \u9989?\cf1\highlight2 
+\par \cf3\highlight0 test:\cf0  None...\cf1\highlight2 
+\par \cf3\highlight0 val: \cf0 Scanning /home/ubuntu/cv_runs/cv/cv_runs/EA/ultralytics/vald/val... 357 images, 0 corrupt: 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 357/357 [00:00<00:00, 2174.\cf1\highlight2 
+\par \cf3\highlight0 val: \cf0 New cache created: /home/ubuntu/cv_runs/cv/cv_runs/EA/ultralytics/vald/val.cache\cf1\highlight2 
+\par \cf0\highlight0                classes   top1_acc   top5_acc: 100%|\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 23/23 [00:01<00:00, 15.88it/s]\cf1\highlight2 
+\par \cf0\highlight0                    all      0.868          1\cf1\highlight2 
+\par \cf0\highlight0 Speed: 0.6ms preprocess, 1.5ms inference, 0.0ms loss, 0.0ms postprocess per image\cf1\highlight2 
+\par \cf0\highlight0 Results saved to \b /home/ubuntu/cv_runs/cv/cv_runs/EA/ultralytics/runs/classify/train2\cf1\highlight2\b0 
+\par \cf0\highlight0 ubuntu@cv2:~/cv_runs/cv/cv_runs/EA/ultralytics$\cf1\highlight2 
+\par \pard\cf0\highlight0\f1\fs16 
+\par }
+ 
