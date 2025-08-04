@@ -56,11 +56,6 @@ CV_PROJECT_FILES/
 
 Future plans include integration into a mobile app to classify waste in real-time using a smartphone camera.
 
-## ✍️ Author
-
-- **Ansh Makwe**  
-  *Computer Vision Researcher, IIT Kanpur*
-
 ## 📄 License
 
 This project is open-sourced under the MIT License.
